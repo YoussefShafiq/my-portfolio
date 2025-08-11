@@ -1,0 +1,202 @@
+import React, { useState } from 'react';
+import { FiMenu, FiX } from 'react-icons/fi';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
+import { BiCodeAlt } from 'react-icons/bi';
+
+export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navItems = [
+        {
+            name: 'Home',
+            path: '/',
+        },
+        {
+            name: 'About',
+            path: '/about',
+        },
+        {
+            name: 'Services',
+            path: '/services',
+        },
+        {
+            name: 'Contact',
+            path: '/contact',
+        }
+    ];
+
+    const socialIcons = [
+        { icon: <FaFacebook />, path: '#' },
+        { icon: <FaTwitter />, path: '#' },
+        { icon: <FaInstagram />, path: '#' }
+    ];
+
+    // Animation variants
+    const mobileMenuVariants = {
+        hidden: {
+            opacity: 0,
+            height: 0,
+            transition: {
+                when: "afterChildren",
+                staggerChildren: 0.05,
+                staggerDirection: -1
+            }
+        },
+        visible: {
+            opacity: 1,
+            height: "auto",
+            transition: {
+                when: "beforeChildren",
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const menuItemVariants = {
+        hidden: {
+            opacity: 0,
+            x: -20
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                ease: "easeOut",
+                duration: 0.2
+            }
+        }
+    };
+
+    const socialIconVariants = {
+        hidden: { scale: 0 },
+        visible: {
+            scale: 1,
+            transition: {
+                type: "spring",
+                stiffness: 260,
+                damping: 20
+            }
+        }
+    };
+
+
+
+    return (
+        <nav className="bg-white shadow-lg top-0 z-50 fixed w-full">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-20 items-center">
+                    {/* Logo */}
+                    <div className="flex items-center">
+                        <div className="flex-shrink-0">
+                            <NavLink to="/" className="text-3xl font-bold text-customBlue">
+                                <BiCodeAlt />
+                            </NavLink>
+                        </div>
+
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:ml-10 md:flex md:space-x-8">
+                            {navItems.map((item, index) => (
+                                <NavLink
+                                    key={index}
+                                    to={item.path}
+                                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium transition duration-300 ext-gray-700 border-transparent hover:text-customBlue`}
+                                >
+                                    {item.name}
+                                </NavLink>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Desktop Right Section */}
+                    <div className="hidden md:flex items-center space-x-6">
+                        <div className="flex space-x-4">
+                            {socialIcons.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.path}
+                                    className="text-gray-500 hover:text-customBlue transition duration-300"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Mobile menu button */}
+                    <div className="md:hidden flex items-center">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-customBlue hover:bg-gray-100 focus:outline-none transition duration-300"
+                            aria-expanded={isMenuOpen}
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            {isMenuOpen ? (
+                                <FiX className="block h-6 w-6" />
+                            ) : (
+                                <FiMenu className="block h-6 w-6" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile menu with animations */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={mobileMenuVariants}
+                        className="md:hidden overflow-hidden bg-white"
+                    >
+                        <motion.div className="px-2 pt-2 pb-3 space-y-1">
+                            {navItems.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    variants={menuItemVariants}
+                                >
+                                    <NavLink
+                                        to={item.path}
+                                        className={({ isActive }) =>
+                                            `block px-3 py-2 rounded-md text-base font-medium transition duration-300 ${isActive
+                                                ? "bg-customWhite text-customBlue"
+                                                : "text-gray-700 hover:bg-customWhite hover:text-customBlue"
+                                            }`
+                                        }
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {item.name}
+                                    </NavLink>
+                                </motion.div>
+                            ))}
+
+                            <motion.div
+                                className="pt-4 border-t border-gray-200"
+                                variants={menuItemVariants}
+                            >
+                                <motion.div className="flex justify-center space-x-6 py-3">
+                                    {socialIcons.map((social, index) => (
+                                        <motion.a
+                                            key={index}
+                                            href={social.path}
+                                            className="text-gray-500 hover:text-customBlue transition duration-300 text-lg"
+                                            variants={socialIconVariants}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {social.icon}
+                                        </motion.a>
+                                    ))}
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
+    );
+}
