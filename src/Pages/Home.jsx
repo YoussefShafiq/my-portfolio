@@ -64,7 +64,7 @@ export function Hero() {
                     </p>
                 </div>
                 <div className="inset-0 flex items-center justify-center">
-                    <div className="w-96 aspect-square rounded-full bg-customBlue/20 border-4 border-customBlue/30 flex items-center justify-center overflow-hidden">
+                    <div className="w-full lg:w-1/2 aspect-square rounded-full bg-customBlue/20 border-4 border-customBlue/30 flex items-center justify-center overflow-hidden">
                         <img src={profileImg} alt="Youssef Shafek" />
                     </div>
                 </div>
