@@ -557,7 +557,7 @@ export function Contactus() {
                                         <Mail className="text-customBlue" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-xl text-customDarkgray mb-1">Email</h3>
+                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray mb-1">Email</h3>
                                         <a href={`mailto:${contactData.email}`} className="text-customGray hover:text-customBlue transition">
                                             {contactData.email}
                                         </a>
@@ -569,7 +569,7 @@ export function Contactus() {
                                         <Phone className="text-customBlue" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-xl text-customDarkgray mb-1">Phone</h3>
+                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray mb-1">Phone</h3>
                                         <div className="text-customGray hover:text-customBlue transition">
                                             {contactData.phone}
                                         </div>
@@ -581,7 +581,7 @@ export function Contactus() {
                                         <BsWhatsapp className="text-customBlue" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-xl text-customDarkgray mb-1">Whatsapp</h3>
+                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray mb-1">Whatsapp</h3>
                                         <a href={`${contactData.whatsapp}`} className="text-customGray hover:text-customBlue transition">
                                             {contactData.whatsapp}
                                         </a>
