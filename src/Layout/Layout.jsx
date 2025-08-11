@@ -6,9 +6,11 @@ import Footer from './Footer'
 export default function Layout({ children }) {
     return <>
         <Navbar />
-        <Outlet>
-            {children}
-        </Outlet>
+        <div className="pt-20 overflow-hidden">
+            <Outlet>
+                {children}
+            </Outlet>
+        </div>
         {/* <Footer /> */}
     </>
 }
