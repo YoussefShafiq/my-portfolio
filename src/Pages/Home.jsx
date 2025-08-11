@@ -570,9 +570,9 @@ export function Contactus() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray mb-1">Phone</h3>
-                                        <div className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
+                                        <a href={`tel:${contactData.phone.replace(/\s/g, '')}`} className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
                                             {contactData.phone}
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
 
