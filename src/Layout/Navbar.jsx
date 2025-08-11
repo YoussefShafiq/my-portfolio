@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import { BiCodeAlt } from 'react-icons/bi';
+import { ImLinkedin } from 'react-icons/im';
+import { FaSquareWhatsapp } from 'react-icons/fa6';
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,9 +29,9 @@ export default function Navbar() {
     ];
 
     const socialIcons = [
-        { icon: <FaFacebook />, path: '#' },
-        { icon: <FaTwitter />, path: '#' },
-        { icon: <FaInstagram />, path: '#' }
+        { icon: <FaGithub />, path: 'https://github.com/YoussefShafiq' },
+        { icon: <ImLinkedin />, path: 'https://www.linkedin.com/in/youssefshafek' },
+        { icon: <FaSquareWhatsapp />, path: 'https://wa.me/+201145528803' },
     ];
 
     // Animation variants
