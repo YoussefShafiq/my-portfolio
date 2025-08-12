@@ -23,7 +23,7 @@ export function Hero() {
 
     return (
         <section className='bg-customWhite'>
-            <div className="flex flex-col lg:flex-row gap-10 items-center container justify-center min-h-screen ">
+            <div className="flex flex-col lg:flex-row gap-10 items-center container justify-center py-20 ">
                 <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-4 text-center">
                     <span
                         className="text-lg md:text-xl mb-4 text-customGray"
@@ -64,7 +64,7 @@ export function Hero() {
                     </p>
                 </div>
                 <div className="w-full lg:w-1/2 inset-0 flex items-center justify-center">
-                    <div className="w-full  aspect-square rounded-full bg-customBlue/20 border-4 border-customBlue/30 flex items-center justify-center overflow-hidden">
+                    <div className="w-3/4 aspect-square rounded-full bg-customBlue/20 border-4 border-customBlue/30 flex items-center justify-center overflow-hidden">
                         <img src={profileImg} alt="Youssef Shafek" />
                     </div>
                 </div>
