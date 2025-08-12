@@ -85,9 +85,9 @@ export default function Navbar() {
 
 
     return (
-        <nav className="bg-white shadow-lg top-0 z-50 fixed w-full">
+        <nav className="bg-[#ffffff44] backdrop-blur-md top-0 z-50 fixed w-full">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20 items-center">
+                <div className="flex justify-between h-16 lg:h-20 items-center">
                     {/* Logo */}
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
@@ -131,7 +131,7 @@ export default function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-customBlue hover:bg-gray-100 focus:outline-none transition duration-300"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-customBlue focus:outline-none transition duration-300"
                             aria-expanded={isMenuOpen}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -153,7 +153,7 @@ export default function Navbar() {
                         animate="visible"
                         exit="hidden"
                         variants={mobileMenuVariants}
-                        className="md:hidden overflow-hidden bg-white"
+                        className="md:hidden overflow-hidden bg-[#ffffff44] backdrop-blur-md"
                     >
                         <motion.div className="px-2 pt-2 pb-3 space-y-1">
                             {navItems.map((item, index) => (
@@ -163,10 +163,8 @@ export default function Navbar() {
                                 >
                                     <NavLink
                                         to={item.path}
-                                        className={({ isActive }) =>
-                                            `block px-3 py-2 rounded-md text-base font-medium transition duration-300 ${isActive
-                                                ? "bg-customWhite text-customBlue"
-                                                : "text-gray-700 hover:bg-customWhite hover:text-customBlue"
+                                        className={
+                                            `block px-3 py-2 rounded-md text-base font-medium transition duration-300 text-gray-700 hover:text-customBlue 
                                             }`
                                         }
                                         onClick={() => setIsMenuOpen(false)}

@@ -4,6 +4,7 @@
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  @apply bg-customWhite
 }
 
 .active {
