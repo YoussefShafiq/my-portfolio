@@ -153,7 +153,7 @@ export default function Navbar() {
                         animate="visible"
                         exit="hidden"
                         variants={mobileMenuVariants}
-                        className="md:hidden overflow-hidden bg-[#ffffff44] backdrop-blur-md"
+                        className="md:hidden overflow-hidden "
                     >
                         <motion.div className="px-2 pt-2 pb-3 space-y-1">
                             {navItems.map((item, index) => (
