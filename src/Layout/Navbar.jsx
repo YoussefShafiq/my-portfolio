@@ -132,7 +132,7 @@ export default function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-customBlue focus:outline-none transition duration-300"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-50 hover:text-customBlue focus:outline-none transition duration-300"
                             aria-expanded={isMenuOpen}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -156,7 +156,7 @@ export default function Navbar() {
                         variants={mobileMenuVariants}
                         className="md:hidden overflow-hidden "
                     >
-                        <motion.div className="px-2 pt-2 pb-3 space-y-1">
+                        <motion.div className="px-2 pt-2 pb-3 space-y-1 text-gray-700 dark:text-gray-50">
                             {navItems.map((item, index) => (
                                 <motion.div
                                     key={index}
@@ -165,7 +165,7 @@ export default function Navbar() {
                                     <NavLink
                                         to={item.path}
                                         className={
-                                            `block px-3 py-2 rounded-md text-base font-medium transition duration-300 text-gray-700 hover:text-customBlue 
+                                            `block px-3 py-2 rounded-md text-base font-medium transition duration-300   hover:text-customBlue 
                                             }`
                                         }
                                         onClick={() => setIsMenuOpen(false)}
