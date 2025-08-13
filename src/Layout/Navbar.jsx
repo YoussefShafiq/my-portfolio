@@ -85,7 +85,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="bg-[#ffffff44] dark:bg-[#151a1d37] shadow-sm backdrop-blur-md lg:top-5 lg:left-10 lg:right-10 top-3 left-5 right-5 z-50 fixed lg:w-[calc(100vw-80px)] w-[calc(100vw-40px)] rounded-3xl">
+        <nav className="bg-[#ffffff44] transition-colors dark:bg-[#151a1d37] shadow-sm backdrop-blur-md lg:top-5 lg:left-10 lg:right-10 top-3 left-5 right-5 z-50 fixed lg:w-[calc(100vw-80px)] w-[calc(100vw-40px)] rounded-3xl">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 lg:h-20 items-center">
                     {/* Logo */}
@@ -99,7 +99,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:ml-10 md:flex md:space-x-8 text-gray-500 dark:text-gray-50">
+                    <div className="hidden md:ml-10 md:flex md:space-x-8 text-gray-500 transition-colors dark:text-gray-50">
                         {navItems.map((item, index) => (
                             <NavLink
                                 key={index}
@@ -118,7 +118,7 @@ export default function Navbar() {
                                 <a
                                     key={index}
                                     href={social.path}
-                                    className="text-gray-500 dark:text-gray-50 hover:text-customBlue transition duration-300"
+                                    className="text-gray-500 transition-colors dark:text-gray-50 hover:text-customBlue transition duration-300"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -132,7 +132,7 @@ export default function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-50 hover:text-customBlue focus:outline-none transition duration-300"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 transition-colors dark:text-gray-50 hover:text-customBlue focus:outline-none transition duration-300"
                             aria-expanded={isMenuOpen}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -156,7 +156,7 @@ export default function Navbar() {
                         variants={mobileMenuVariants}
                         className="md:hidden overflow-hidden "
                     >
-                        <motion.div className="px-2 pt-2 pb-3 space-y-1 text-gray-700 dark:text-gray-50">
+                        <motion.div className="px-2 pt-2 pb-3 space-y-1 text-gray-700 transition-colors dark:text-gray-50">
                             {navItems.map((item, index) => (
                                 <motion.div
                                     key={index}
@@ -184,7 +184,7 @@ export default function Navbar() {
                                         <motion.a
                                             key={index}
                                             href={social.path}
-                                            className="text-gray-500 dark:text-gray-50 hover:text-customBlue transition duration-300 text-lg"
+                                            className="text-gray-500 transition-colors dark:text-gray-50 hover:text-customBlue transition duration-300 text-lg"
                                             variants={socialIconVariants}
                                             target="_blank"
                                             rel="noopener noreferrer"

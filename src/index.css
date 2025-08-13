@@ -16,7 +16,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-white dark:bg-customDarkBackground
+  @apply bg-white transition-colors dark:bg-customDarkBackground
 }
 
 ::-webkit-scrollbar-thumb {

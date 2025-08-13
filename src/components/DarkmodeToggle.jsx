@@ -37,7 +37,7 @@ const DarkmodeToggle = () => {
     <motion.button
       onClick={toggleTheme}
       whileTap={{ scale: 0.9 }}
-      className={`p-2 rounded-full transition-colors duration-300 backdrop-blur-md ${isDark ? 'bg-customDarkgray text-customWhite' : 'bg-customWhite/10 dark:bg-customDarkBackground/10  text-customDarkgray dark:text-customlightgray'
+      className={`p-2 rounded-full transition-colors duration-300 backdrop-blur-md ${isDark ? 'bg-customDarkgray text-customWhite' : 'bg-customWhite/10 transition-colors dark:bg-customDarkBackground/10  text-customDarkgray transition-colors dark:text-customlightgray'
         } shadow-md hover:shadow-lg`}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
@@ -50,7 +50,7 @@ const DarkmodeToggle = () => {
         {isDark ? (
           <Sun size={20} className="text-customWhite" />
         ) : (
-          <Moon size={20} className="text-customDarkgray dark:text-customlightgray" />
+          <Moon size={20} className="text-customDarkgray transition-colors dark:text-customlightgray" />
         )}
       </motion.div>
     </motion.button>
