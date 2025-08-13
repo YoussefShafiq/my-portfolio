@@ -345,7 +345,7 @@ export function Projects() {
                             >
                                 <button
                                     onClick={closeModal}
-                                    className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 transition-colors dark:bg-customCardDarkBackground hover:bg-gray-200 text-customDarkgray transition-colors dark:text-customlightgray"
+                                    className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 dark:bg-customCardDarkBackground hover:bg-gray-200 text-customDarkgray transition-colors dark:text-customlightgray"
                                 >
                                     <FiX className="w-5 h-5" />
                                 </button>
@@ -369,7 +369,7 @@ export function Projects() {
                                                     href={selectedProject.github}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="flex items-center px-4 py-2 bg-gray-100  transition-colors dark:bg-customBlue/20 dark:hover:bg-customBlue/10 hover:bg-gray-200 rounded-lg text-customDarkgray transition-colors dark:text-customlightgray transition-all"
+                                                    className="flex items-center px-4 py-2 bg-gray-100  dark:bg-customBlue/20 dark:hover:bg-customBlue/10 hover:bg-gray-200 rounded-lg text-customDarkgray dark:text-customlightgray transition-all"
                                                 >
                                                     <FiGithub className="mr-2" /> Code
                                                 </a>
@@ -479,7 +479,7 @@ export function Contactus() {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-customGray transition-colors dark:bg-white/5 transition-colors dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray dark:bg-white/5 transition-colors dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent"
                                     required
                                 />
                             </div>
@@ -494,7 +494,7 @@ export function Contactus() {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-customGray transition-colors dark:bg-white/5 transition-colors dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray dark:bg-white/5 transition-colors dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent"
                                     required
                                 />
                             </div>
@@ -509,7 +509,7 @@ export function Contactus() {
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-customGray transition-colors dark:bg-white/5 transition-colors dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray transition-colors dark:bg-white/5 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent"
                                     required
                                 />
                             </div>
@@ -524,7 +524,7 @@ export function Contactus() {
                                     rows="5"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-customGray transition-colors dark:bg-white/5 transition-colors dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray transition-colors dark:bg-white/5 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent"
                                     required
                                 ></textarea>
                             </div>
@@ -558,7 +558,7 @@ export function Contactus() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray transition-colors dark:text-customlightgray mb-1">Email</h3>
-                                        <a href={`mailto:${contactData.email}`} className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
+                                        <a href={`mailto:${contactData.email}`} className="text-sm lg:text-base text-customGray hover:text-customBlue">
                                             {contactData.email}
                                         </a>
                                     </div>
@@ -570,7 +570,7 @@ export function Contactus() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray transition-colors dark:text-customlightgray mb-1">Phone</h3>
-                                        <a href={`tel:${contactData.phone.replace(/\s/g, '')}`} className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
+                                        <a href={`tel:${contactData.phone.replace(/\s/g, '')}`} className="text-sm lg:text-base text-customGray hover:text-customBlue">
                                             {contactData.phone}
                                         </a>
                                     </div>
@@ -582,7 +582,7 @@ export function Contactus() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray transition-colors dark:text-customlightgray mb-1">Whatsapp</h3>
-                                        <a href={`${contactData.whatsapp}`} className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
+                                        <a href={`${contactData.whatsapp}`} className="text-sm lg:text-base text-customGray hover:text-customBlue">
                                             {contactData.whatsapp}
                                         </a>
                                     </div>
