@@ -22,7 +22,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section className='bg-customWhite'>
+        <section className='bg-customWhite dark:bg-customDarkBackground pt-20 '>
             <div className="flex flex-col lg:flex-row gap-10 items-center container justify-center py-20 ">
                 <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-4 text-center">
                     <span
@@ -34,7 +34,7 @@ export function Hero() {
                     </span>
 
                     <h2
-                        className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-customDarkgray"
+                        className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-customDarkgray dark:text-customlightgray"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
@@ -99,7 +99,7 @@ export function About() {
     ];
 
     return (
-        <section id="about" className="py-20 bg-customWhite">
+        <section id="about" className="py-20 bg-customWhite dark:bg-customDarkBackground ">
             <div className="container mx-auto px-6">
                 {/* Section Header */}
                 <motion.div
@@ -111,7 +111,7 @@ export function About() {
                     className="text-center mb-16"
                 >
                     <span className="text-lg font-semibold text-customBlue">ABOUT ME</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mt-4 text-customDarkgray">Who I Am</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mt-4 text-customDarkgray dark:text-customlightgray">Who I Am</h2>
                     <div className="w-20 h-1 mx-auto mt-6 rounded-full bg-customBlue"></div>
                 </motion.div>
 
@@ -125,8 +125,8 @@ export function About() {
                         transition={{ duration: 0.8 }}
                         className="lg:w-1/3"
                     >
-                        <div className="bg-gradient-to-br from-customBlue/5 to-customBlue/10 p-8 rounded-xl h-full">
-                            <h3 className="text-2xl font-bold mb-6 text-customDarkgray">Quick Facts</h3>
+                        <div className="bg-gradient-to-br from-customBlue/5 to-customBlue/5 dark:to-customBlue/10 p-8 rounded-xl h-full">
+                            <h3 className="text-2xl font-bold mb-6 text-customDarkgray dark:text-customlightgray">Quick Facts</h3>
 
                             <div className="space-y-6">
                                 {stats.map((stat, index) => (
@@ -137,13 +137,13 @@ export function About() {
                                         whileInView="visible"
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                                        className="flex items-center p-4 bg-white rounded-lg shadow-sm"
+                                        className="flex items-center p-4 bg-white dark:bg-customCardDarkBackground dark:border dark:border-customGray rounded-lg shadow-sm"
                                     >
                                         <div className="p-3 mr-4 rounded-full bg-customBlue/10 text-customBlue">
                                             {stat.icon}
                                         </div>
                                         <div>
-                                            <div className="text-2xl font-bold text-customDarkgray">{stat.value}</div>
+                                            <div className="text-2xl font-bold text-customDarkgray dark:text-customlightgray">{stat.value}</div>
                                             <div className="text-customGray">{stat.label}</div>
                                         </div>
                                     </motion.div>
@@ -161,7 +161,7 @@ export function About() {
                         className="lg:w-2/3"
                     >
                         <div className="mb-10">
-                            <h3 className="text-3xl font-bold mb-6 text-customDarkgray">A dedicated Web Developer based in Cairo, Egypt</h3>
+                            <h3 className="text-3xl font-bold mb-6 text-customDarkgray dark:text-customlightgray">A dedicated Web Developer based in Cairo, Egypt</h3>
                             <p className="text-lg text-customGray leading-relaxed mb-6">
                                 I specialize in creating exceptional digital experiences. With 2+ years of experience in web development,
                                 I combine technical expertise with creative problem-solving to deliver high-quality solutions.
@@ -182,14 +182,14 @@ export function About() {
                                     viewport={{ once: true }}
                                     variants={fadeIn}
                                     transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-                                    className="p-6 rounded-xl bg-white shadow-sm border border-gray-100"
+                                    className="p-6 rounded-xl bg-white dark:bg-customCardDarkBackground shadow-sm border border-customGray"
                                 >
                                     <div className="flex items-start">
                                         <div className="p-3 rounded-lg bg-customBlue/10 text-customBlue mr-4">
                                             {skill.icon}
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-semibold text-customDarkgray mb-2">{skill.name}</h4>
+                                            <h4 className="text-xl font-semibold text-customDarkgray dark:text-customlightgray mb-2">{skill.name}</h4>
                                             <p className="text-customGray">{skill.description}</p>
                                         </div>
                                     </div>
@@ -282,12 +282,12 @@ export function Projects() {
     };
 
     return (
-        <section id="projects" className="py-20 bg-customWhite">
+        <section id="projects" className="py-20 bg-customWhite dark:bg-customDarkBackground ">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="flex flex-col items-center text-center mb-16">
                     <span className="text-lg font-semibold text-customBlue mb-2">MY WORK</span>
-                    <h2 className="text-4xl font-bold text-customDarkgray mb-4">Recent Projects</h2>
+                    <h2 className="text-4xl font-bold text-customDarkgray dark:text-customlightgray mb-4">Recent Projects</h2>
                     <div className="w-20 h-1 bg-customBlue rounded-full"></div>
                 </div>
 
@@ -301,7 +301,7 @@ export function Projects() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             whileHover={{ y: -5 }}
-                            className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 cursor-pointer"
+                            className="bg-white  dark:bg-customCardDarkBackground rounded-xl overflow-hidden shadow-lg border border-customGray cursor-pointer"
                             onClick={() => openModal(project)}
                         >
                             <div className="h-48 overflow-hidden">
@@ -312,7 +312,7 @@ export function Projects() {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-customDarkgray mb-2">{project.title}</h3>
+                                <h3 className="text-xl font-bold text-customDarkgray dark:text-customlightgray mb-2">{project.title}</h3>
                                 <p className="text-customGray mb-4">{project.description}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag, index) => (
@@ -340,12 +340,12 @@ export function Projects() {
                                 initial={{ scale: 0.9, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 exit={{ scale: 0.9, opacity: 0 }}
-                                className="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+                                className="relative bg-white dark:bg-customCardDarkBackground rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <button
                                     onClick={closeModal}
-                                    className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-customDarkgray"
+                                    className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 dark:bg-customCardDarkBackground hover:bg-gray-200 text-customDarkgray dark:text-customlightgray"
                                 >
                                     <FiX className="w-5 h-5" />
                                 </button>
@@ -360,7 +360,7 @@ export function Projects() {
 
                                 <div className="p-6 md:p-8">
                                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-customDarkgray mb-2 md:mb-0">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-customDarkgray dark:text-customlightgray mb-2 md:mb-0">
                                             {selectedProject.title}
                                         </h3>
                                         <div className="flex gap-3">
@@ -369,7 +369,7 @@ export function Projects() {
                                                     href={selectedProject.github}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-customDarkgray"
+                                                    className="flex items-center px-4 py-2 bg-gray-100  dark:bg-customBlue/20 dark:hover:bg-customBlue/10 hover:bg-gray-200 rounded-lg text-customDarkgray dark:text-customlightgray transition-all"
                                                 >
                                                     <FiGithub className="mr-2" /> Code
                                                 </a>
@@ -379,7 +379,7 @@ export function Projects() {
                                                     href={selectedProject.url}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="flex items-center px-4 py-2 bg-customBlue hover:bg-customBlue/90 text-white rounded-lg"
+                                                    className="flex items-center px-4 py-2 bg-customBlue hover:bg-customBlue/90 text-white rounded-lg transition-all"
                                                 >
                                                     <FiExternalLink className="mr-2" /> Live Demo
                                                 </a>
@@ -392,7 +392,7 @@ export function Projects() {
                                     </p>
 
                                     <div className="mb-6">
-                                        <h4 className="text-lg font-semibold text-customDarkgray mb-3">Technologies Used</h4>
+                                        <h4 className="text-lg font-semibold text-customDarkgray dark:text-customlightgray mb-3">Technologies Used</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {selectedProject.tags.map((tag, index) => (
                                                 <span key={index} className="px-3 py-1 bg-customBlue/10 text-customBlue rounded-full">
@@ -443,7 +443,7 @@ export function Contactus() {
     };
 
     return (
-        <section className="py-20 px-4 bg-customWhite" id="contact">
+        <section className="py-20 px-4 bg-customWhite dark:bg-customDarkBackground " id="contact">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -453,7 +453,7 @@ export function Contactus() {
                     className="text-center mb-16"
                 >
                     <span className="text-lg font-semibold text-customBlue">GET IN TOUCH</span>
-                    <h1 className="text-4xl font-bold mt-4 text-customDarkgray">
+                    <h1 className="text-4xl font-bold mt-4 text-customDarkgray dark:text-customlightgray">
                         Contact <span className="text-customBlue">Me</span>
                     </h1>
                     <div className="w-20 h-1 mx-auto mt-6 rounded-full bg-customBlue"></div>
@@ -468,9 +468,9 @@ export function Contactus() {
                         viewport={{ once: true }}
                         className="w-full lg:w-1/2"
                     >
-                        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <form onSubmit={handleSubmit} className="bg-white dark:bg-customBlue/5 p-8 rounded-xl shadow-lg border border-customGray">
                             <div className="mb-6">
-                                <label htmlFor="name" className="block text-customDarkgray font-medium mb-2">
+                                <label htmlFor="name" className="block text-customDarkgray dark:text-customlightgray font-medium mb-2">
                                     Your Name
                                 </label>
                                 <input
@@ -479,13 +479,13 @@ export function Contactus() {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray dark:bg-white/5 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
                                     required
                                 />
                             </div>
 
                             <div className="mb-6">
-                                <label htmlFor="email" className="block text-customDarkgray font-medium mb-2">
+                                <label htmlFor="email" className="block text-customDarkgray dark:text-customlightgray font-medium mb-2">
                                     Email Address
                                 </label>
                                 <input
@@ -494,13 +494,13 @@ export function Contactus() {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray dark:bg-white/5 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
                                     required
                                 />
                             </div>
 
                             <div className="mb-6">
-                                <label htmlFor="subject" className="block text-customDarkgray font-medium mb-2">
+                                <label htmlFor="subject" className="block text-customDarkgray dark:text-customlightgray font-medium mb-2">
                                     Subject
                                 </label>
                                 <input
@@ -509,13 +509,13 @@ export function Contactus() {
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray dark:bg-white/5 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
                                     required
                                 />
                             </div>
 
                             <div className="mb-8">
-                                <label htmlFor="message" className="block text-customDarkgray font-medium mb-2">
+                                <label htmlFor="message" className="block text-customDarkgray dark:text-customlightgray font-medium mb-2">
                                     Message
                                 </label>
                                 <textarea
@@ -524,7 +524,7 @@ export function Contactus() {
                                     rows="5"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
+                                    className="w-full px-4 py-3 border border-customGray dark:bg-white/5 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-customBlue focus:border-transparent transition"
                                     required
                                 ></textarea>
                             </div>
@@ -548,8 +548,8 @@ export function Contactus() {
                         viewport={{ once: true }}
                         className="w-full lg:w-1/2"
                     >
-                        <div className="bg-gradient-to-br from-customBlue/5 to-customBlue/10 p-8 rounded-xl h-full border border-gray-100 shadow-lg">
-                            <h2 className="text-2xl font-bold mb-8 text-customDarkgray">Contact Information</h2>
+                        <div className="bg-gradient-to-br from-customBlue/5 to-customBlue/10 p-8 rounded-xl h-full border border-customGray shadow-lg">
+                            <h2 className="text-2xl font-bold mb-8 text-customDarkgray dark:text-customlightgray">Contact Information</h2>
 
                             <div className="space-y-8">
                                 <div className="flex items-start gap-6">
@@ -557,7 +557,7 @@ export function Contactus() {
                                         <Mail className="text-customBlue" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray mb-1">Email</h3>
+                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray dark:text-customlightgray mb-1">Email</h3>
                                         <a href={`mailto:${contactData.email}`} className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
                                             {contactData.email}
                                         </a>
@@ -569,7 +569,7 @@ export function Contactus() {
                                         <Phone className="text-customBlue" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray mb-1">Phone</h3>
+                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray dark:text-customlightgray mb-1">Phone</h3>
                                         <a href={`tel:${contactData.phone.replace(/\s/g, '')}`} className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
                                             {contactData.phone}
                                         </a>
@@ -581,7 +581,7 @@ export function Contactus() {
                                         <BsWhatsapp className="text-customBlue" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray mb-1">Whatsapp</h3>
+                                        <h3 className="font-semibold text-sm lg:text-xl text-customDarkgray dark:text-customlightgray mb-1">Whatsapp</h3>
                                         <a href={`${contactData.whatsapp}`} className="text-sm lg:text-base text-customGray hover:text-customBlue transition">
                                             {contactData.whatsapp}
                                         </a>
@@ -590,7 +590,7 @@ export function Contactus() {
                             </div>
 
                             <div className="mt-12">
-                                <h3 className="font-semibold text-xl text-customDarkgray mb-4">Let's Connect</h3>
+                                <h3 className="font-semibold text-xl text-customDarkgray dark:text-customlightgray mb-4">Let's Connect</h3>
                                 <p className="text-customGray leading-relaxed">
                                     Have a project in mind or want to discuss potential opportunities?
                                     Feel free to reach out through the contact form or directly via email or phone.

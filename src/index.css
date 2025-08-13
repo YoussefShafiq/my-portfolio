@@ -4,7 +4,7 @@
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  @apply bg-customWhite
+  @apply bg-customDarkBackground
 }
 
 .active {
@@ -16,7 +16,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-white
+  @apply bg-white dark:bg-customDarkBackground
 }
 
 ::-webkit-scrollbar-thumb {

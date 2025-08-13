@@ -85,7 +85,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="bg-[#ffffff44] shadow-sm backdrop-blur-md lg:top-5 lg:left-10 lg:right-10 top-3 left-5 right-5 z-50 fixed lg:w-[calc(100vw-80px)] w-[calc(100vw-40px)] rounded-3xl">
+        <nav className="bg-[#ffffff44] dark:bg-[#151a1d37] shadow-sm backdrop-blur-md lg:top-5 lg:left-10 lg:right-10 top-3 left-5 right-5 z-50 fixed lg:w-[calc(100vw-80px)] w-[calc(100vw-40px)] rounded-3xl">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 lg:h-20 items-center">
                     {/* Logo */}
@@ -96,18 +96,19 @@ export default function Navbar() {
                             </NavLink>
                         </div>
 
-                        {/* Desktop Navigation */}
-                        <div className="hidden md:ml-10 md:flex md:space-x-8">
-                            {navItems.map((item, index) => (
-                                <NavLink
-                                    key={index}
-                                    to={item.path}
-                                    className={`inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium transition duration-300 ext-gray-700 border-transparent hover:text-customBlue`}
-                                >
-                                    {item.name}
-                                </NavLink>
-                            ))}
-                        </div>
+                    </div>
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:ml-10 md:flex md:space-x-8 text-gray-500 dark:text-gray-50">
+                        {navItems.map((item, index) => (
+                            <NavLink
+                                key={index}
+                                to={item.path}
+                                className={`inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium transition duration-300 ext-gray-700 border-transparent hover:text-customBlue`}
+                            >
+                                {item.name}
+                            </NavLink>
+                        ))}
                     </div>
 
                     {/* Desktop Right Section */}
@@ -117,7 +118,7 @@ export default function Navbar() {
                                 <a
                                     key={index}
                                     href={social.path}
-                                    className="text-gray-500 hover:text-customBlue transition duration-300"
+                                    className="text-gray-500 dark:text-gray-50 hover:text-customBlue transition duration-300"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -183,7 +184,7 @@ export default function Navbar() {
                                         <motion.a
                                             key={index}
                                             href={social.path}
-                                            className="text-gray-500 hover:text-customBlue transition duration-300 text-lg"
+                                            className="text-gray-500 dark:text-gray-50 hover:text-customBlue transition duration-300 text-lg"
                                             variants={socialIconVariants}
                                             target="_blank"
                                             rel="noopener noreferrer"
